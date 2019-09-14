@@ -1,3 +1,25 @@
+# Stock Tracker
+
+## Description
+
+App is bootstraped using CRA with TypeScript
+
+Stack:
+
+- constate, localStorage (app state management)
+- bootstrap, react-bootstrap, classnames (UI)
+- hookrouter (routing)
+- axios (HTTP requests)
+
+## WARNINGS
+
+- Axios in version 0.18 should stay not updated as long as params merging to axios instance bug is not fixed
+- app doesn't include any loaders to notify about data fetching
+- app doesn't include any tests or HTTP requests rejection handling (only add company form validation works)
+- because the only form required handling only one fild, I didn't use any form control library
+
+# CRA info part
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

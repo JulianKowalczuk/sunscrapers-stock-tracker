@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useRoutes, useRedirect } from 'hookrouter'
+import React from 'react'
+import Container from 'react-bootstrap/Container'
 
-const App: React.FC = () => {
+import { Navbar } from 'modules'
+import routes, { hookrouterRoutes } from 'routes'
+
+const App = () => {
+  useRedirect('/', routes.companies)
+  const route = useRoutes(hookrouterRoutes)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Navbar />
+
+      <br />
+
+      <Container>{route}</Container>
+    </>
+  )
 }
 
-export default App;
+export default App
