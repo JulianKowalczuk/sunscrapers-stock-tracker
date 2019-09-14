@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import BootstrapNavbar from 'react-bootstrap/Navbar'
 
-import routes from 'routes'
+import routes, { routeLabels } from 'routes'
 
 const Navbar = () => {
   const navigateToAddCompanyRoute = useCallback(() => navigate(routes.addCompany), [])
@@ -20,9 +20,9 @@ const Navbar = () => {
 
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link onClick={navigateToAddCompanyRoute}>Track new company</Nav.Link>
+            <Nav.Link onClick={navigateToAddCompanyRoute}>{routeLabels.addCompany}</Nav.Link>
 
-            <Nav.Link onClick={navigateToCompaniesRoute}>Companies</Nav.Link>
+            <Nav.Link onClick={navigateToCompaniesRoute}>{routeLabels.companies}</Nav.Link>
           </Nav>
         </BootstrapNavbar.Collapse>
       </Container>

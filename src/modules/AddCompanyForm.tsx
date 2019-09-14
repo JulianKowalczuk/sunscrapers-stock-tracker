@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
-import routes from 'routes'
+import routes, { routeLabels } from 'routes'
 import { alphavantageService } from 'services'
 import { useStore } from 'store'
 
@@ -35,7 +35,7 @@ const AddCompanyForm = () => {
 
   return (
     <>
-      <h1>Track new company</h1>
+      <h2>{routeLabels.addCompany}</h2>
 
       <Form onSubmit={handleSubmit}>
         <Form.Group>
